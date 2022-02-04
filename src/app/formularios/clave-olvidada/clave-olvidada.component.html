@@ -1,0 +1,65 @@
+<div class="mt-5">
+    <div class="row m-0 p-0 d-flex justify-content-center">
+        <div class="col-6 d-flex justify-content-center">
+           <!----> <div class="w-auto container">
+                <div class="bg-ligh rounded shadow-lg">
+                    <div  style="background-color:#D8D8D8; width: 400px; height: 400px;">
+                        <div class="row">
+                          <i   class="fa fa-Twitter fa-4x text-center my-3" ><span  class="fas fa-lock"></span></i>
+                            <h2 class="text-center">¿Olvido su contraseña?</h2>
+                        </div>
+                        <div class="row mt-4">
+                            <div class="col-12 mx-auto px-4 " >
+                                <div class="row">
+                                    <div class="col-12">
+                                        <form [formGroup]="claveOlvidadaForm">
+                                            <div class="row " >
+                                              <div class="col-12" >
+                                                <div class="i-group">
+                                                    <input type="username" required  id="username" formControlName="username">
+                                                    <label class="input-label" for="username">
+                                                        <span class="text-label">Digite el username:</span>
+                                                    </label><br>
+                                                </div><br>
+                                              </div>
+                                                <div class="col-12" >
+                                                    <div class="i-group">
+                                                        <input type="email" required  id="email-usuario" formControlName="correo">
+                                                        <label class="input-label" for="email-usuario">
+                                                            <span class="text-label">Digite el E-mail ya registrado</span>
+                                                        </label><br>
+                                                    </div><br>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="row mt-4">
+                            <div class="col-12 text-center">
+                                <button class="btn btn-warning px-2 mb-3" (click)="recuperarClave()" id="boton">Enviar</button><br><br>
+                                <a routerLink="" class="link">¿Ya tienes cuenta?</a><br>
+                            </div>
+
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-6 text-center">
+          <img src="../../../assets/img/logoprincipal.png" width="400px;" height="400px;">
+      </div>
+    </div>
+    <div class="row mt-0 align-items-center text-center">
+        <div class="col-md-6 my-5">
+            <img src="../../../assets/img/LogoSemillero.png" alt="">
+        </div>
+        <div class="col-md-6">
+            <img src="../../../assets/img/LogoST.png" alt="">
+        </div>
+    </div>
+</div>

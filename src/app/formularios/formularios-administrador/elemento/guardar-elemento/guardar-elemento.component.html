@@ -1,0 +1,71 @@
+<div class="container form-card">
+  <div class="row">
+    <div class="col-md-12 mx-auto">
+      <h3 class="text-center py-2">Crear o Modificar Elemento</h3>
+      <form [formGroup]="formelemento">
+        <div class="my-2">
+          <label>Nombre: </label>
+          <input id="nombre" formControlName="nombre" type="text" class="form-control normal-input" placeholder="nombre">
+        </div>
+        <div class="my-2">
+          <label>Tipo Elemento: </label>
+          <br><br>
+          <select class="form-select" formControlName="tipoelemento"  >
+            <option *ngFor="let item of listaTipo"  value="{{item.Id}}">{{item.Nombre}}</option>
+          </select>
+        </div>
+        <!--<div class="my-2">
+          <label>Imagen: </label>
+          <br><br>
+          <input type="file" formControlName="imagen">
+        </div>-->
+        <div class="my-2">
+          <label>Marca: </label>
+          <input id="marca" formControlName="marca" type="text" class="form-control normal-input" placeholder="marca">
+        </div>
+        <div class="my-2">
+          <label>Serial: </label>
+          <input id="serial" formControlName="serial" type="text" class="form-control normal-input" placeholder="serial">
+        </div>
+        <div class="my-2">
+          <label>Zona: </label>
+          <br><br>
+          <select class="form-select" formControlName="zona"  >
+            <option *ngFor="let item of listaZona"  value="{{item.Id}}">{{item.Nombre}}</option>
+          </select>
+        </div>
+        <div class="my-2">
+          <label>Estado: </label>
+          <br><br>
+          <select class="form-select" formControlName="estado"  >
+            <option *ngFor="let item of listaEstado"  value="{{item.Id}}">{{item.Nombre}}</option>
+        </select>
+        </div>
+        <div class="mt-4">
+          <label for="activo">Activo: </label>
+          <div class="input-group my-4">
+            <select name="" formControlName="activo" class="form-select">
+              <option value="true">Si</option>
+              <option value="false">No</option>
+            </select>
+          </div>
+        </div>
+        <div class="my-3">
+          <div class="d-flex justify-content-between">
+            <div class="text-start">
+              <button class="btn btn-outline-secondary">Cancelar</button>
+            </div>
+            <div class="text-end">
+              <span *ngIf="data.id>0">
+                <button class="btn btn-normal-c" (click)="guardar()">Modificar</button>
+              </span>
+              <span *ngIf="data.id==0">
+                <button class="btn btn-normal-c"  [disabled]="formelemento.invalid" (click)="guardar()">Guardar</button>
+              </span>
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

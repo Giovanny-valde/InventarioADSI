@@ -1,0 +1,65 @@
+<div class="row align-items-center">
+  <div class="col-md-2">
+    <h3 class="principal">Ambiente</h3>
+  </div>
+  <div class="col-md-10 text-end">
+    <div>
+      <input class="buscar" id="buscar" matInput placeholder="Buscar" autocomplete="off" (keyup)="filterData($event)" >
+      <button class="btn rounded-pill btn-b"><span class="fas fa-search"></span></button>
+    </div>
+  </div>
+</div>
+<div class="row mt-3">
+  <div class="col-md-12">
+    <table mat-table [dataSource]="dataSource" matSort class="table table-striped">
+      <!-- id Column -->
+      <ng-container matColumnDef="Id"  >
+        <th mat-header-cell *matHeaderCellDef mat-sort-header ><span style="position: relative;">#</span></th>
+        <td mat-cell *matCellDef="let item" > {{item.Id}} </td>
+      </ng-container>
+      <!-- Nombre Sede Column -->
+      <ng-container matColumnDef="NombreSede">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header>Nombre Sede</th>
+        <td mat-cell *matCellDef="let item"> {{item.Sede.Nombre}} </td>
+      </ng-container>
+      <!-- Nombre Column -->
+      <ng-container matColumnDef="Nombre">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header>Nombre</th>
+        <td mat-cell *matCellDef="let item"> {{item.Nombre}} </td>
+      </ng-container>
+       <!-- capacidad Column -->
+       <ng-container matColumnDef="Capacidad">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header>Capacidad</th>
+        <td mat-cell *matCellDef="let item"> {{item.Capacidad}} </td>
+      </ng-container>
+      <!-- descripcion Column -->
+      <ng-container matColumnDef="Descripcion">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header>Descripcion</th>
+        <td mat-cell *matCellDef="let item"> {{item.Descripcion}} </td>
+      </ng-container>
+      <!--Opciones-->
+      <ng-container matColumnDef="Opciones">
+        <th mat-header-cell *matHeaderCellDef >Opciones</th>
+          <td mat-cell *matCellDef="let item">
+            <button class="btn btn-outline-warning me-2" (click)="modalGuardarAmbiente(item.Id)">
+              <span class="fas fa-edit"></span>
+            </button>
+            <button class="btn btn-outline-danger" (click)="eliminar(item.Id)">
+              <span class="fas fa-trash-alt"></span>
+            </button>
+          </td>
+      </ng-container>
+      <tr mat-header-row *matHeaderRowDef="displayedColumns" ></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
+  </div>
+</div>
+
+ <mat-paginator #paginator
+  [pageSize]="5"
+  [pageSizeOptions]="[10,20,50,100]"
+  >
+</mat-paginator>
+<div class="text-end">
+  <button class="btn btn-normal-c" (click)="modalGuardarAmbiente(0)"><span class="fas fa-save"></span> Agregar</button>
+</div>

@@ -1,0 +1,110 @@
+<div class="mg">
+    <div class="row m-120 p-120 d-flex justify-content-center">
+        <div class="col-12 d-flex justify-content-center">
+            <div class="w-auto container">
+                <div class="bg-ligh rounded shadow-lg borde">
+                    <div class="mx-auto general" style="background-color:#D8D8D8">
+                        <div class="row titulo">
+
+                            <h4 class=" text-center">Editar Perfil</h4>
+
+                        </div>
+                        <div class="row mt-9">
+                            <div class="col-12 mx-auto px-9 margen">
+                                <div class="row">
+                                    <div class="col-12">
+                                        <form class="datos">
+                                            <div class="row ">
+                                                <div class="col-6">
+                                                    <div class="i-group">
+                                                        <input type="number" required id="documento-usuario">
+                                                        <label class="input-label" for="documento-usuario">
+                                                            Documento:
+                                                        </label>
+                                                    </div>
+                                                    <p>
+                                                </div>
+                                                <div class="col-6">
+                                                    <div class="tipo">
+                                                        Tipo: 
+                                                        <select name="tipo" class="tipo">
+
+                                                            <option value="1">Tarjeta de identidad</option>
+
+                                                            <option value="2">Cédula de ciudadania</option>
+
+                                                            <option value="3">Cédula de extranjeria</option>
+
+                                                        </select>
+
+                                                    </div>
+                                                </div>
+                                                <div class="col-10">
+                                                    <div class="i-group">
+                                                        <input type="text" required id="nombre-usuario">
+                                                        <label class="input-label" for="nombre-usuario">
+                                                            Nombres:
+                                                        </label>
+                                                    </div>
+                                                    <p>
+                                                </div>
+                                                <div class="col-10">
+                                                    <div class="i-group">
+                                                        <input type="text" required id="apellido-usuario">
+                                                        <label class="input-label" for="apellido-usuario">
+                                                            Apellidos:
+                                                        </label>
+                                                    </div>
+                                                    <p>
+                                                </div>
+                                                <div class="col-10">
+                                                    <div class="i-group">
+                                                        <input type="email" required id="email-usuario">
+                                                        <label class="input-label" for="email-usuario">
+                                                            E-mail:
+                                                        </label>
+                                                    </div>
+                                                    <p>
+                                                </div>
+                                                <div class="col-10">
+                                                    <div class="i-group">
+                                                        <input type="text" required id="direccion-usuario">
+                                                        <label class="input-label" for="direccion-usuario">
+                                                            Direccion:
+                                                        </label>
+                                                    </div>
+                                                    <p>
+                                                </div>
+                                                <div class="col-10">
+                                                    <div class="i-group">
+                                                        <input type="number" required id="telefono-usuario">
+                                                        <label class="input-label" for="telefono-usuario">
+                                                            Telefono:
+                                                        </label>
+                                                    </div>
+                                                    <p>
+                                                </div>
+                                                <div class="col-12">
+                                                    <div class="boton1">
+                                                        <button class="btn btn-outline-black"
+                                                        onclick="eliminar();" routerLink="/">Eliminar</button>
+                                                            
+                                                    </div>
+                                                    <div class="boton2"><button class="btn btn-outline-black"
+                                                        onclick="guardar();">Modificar</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                        </form>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

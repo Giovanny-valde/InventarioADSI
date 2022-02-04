@@ -1,0 +1,47 @@
+<div class="container form-card">
+    <div class="row">
+      <div class="col-md-12 mx-auto">
+        <h3 class="text-center py-2">Crear o Modificar Usuario - Datos Basicos</h3>
+        <form [formGroup]="formusuariorol">
+          <div class="my-2">
+            <label>Username: </label>
+            <br><br>
+            <select class="form-select" formControlName="username"  >
+                <option *ngFor="let item of listaUsuarios"  value="{{item.Id}}">{{item.Username}}</option>
+            </select>
+          </div>
+          <div class="my-2">
+            <label>Rol: </label>
+            <br><br>
+            <select class="form-select" formControlName="rol"  >
+                <option *ngFor="let item of listaRoles"  value="{{item.Id}}">{{item.Nombre}}</option>
+            </select>
+          </div>
+          <div class="mt-4">
+            <label for="activo">Activo: </label>
+            <div class="input-group my-4">
+              <select name="" formControlName="activo"  class="form-select">
+                <option value="true">Si</option>
+                <option value="false">No</option>
+              </select>
+            </div>
+          </div>
+          <div class="my-3">
+            <div class="d-flex justify-content-between">
+              <div class="text-start">
+                <button class="btn btn-outline-secondary">Cancelar</button>
+              </div>
+              <div class="text-end">
+                <!-- <span *ngIf="data.id>0">
+                  <button class="btn btn-normal-c" (click)="guardar()"> Modificar</button>
+                </span>
+                <span *ngIf="data.id==0"> -->
+                  <button class="btn btn-normal-c" (click)="guardar()" [disabled]="formusuariorol.invalid">Guardar</button>
+                <!-- </span> -->
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>

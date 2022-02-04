@@ -1,0 +1,60 @@
+<div class="container" style="border-color: #FA4E0D;"  *ngIf="ver == 0">
+    <div class="row justify-content-center align-items-center">
+        <div class="col-2">
+            <img width="100" height="100" class="img-fluid" src="../../../../assets/img/logosena.png" alt="" srcset="">
+        </div>
+        <div class="col-6 text-center">
+            <h1 class=" mx-auto">DEVELOPERS & GEEKS</h1>
+        </div>
+        <div class="col-4 text-end">
+            <img id="img2" class="img-fluid" src="../../../../assets/img/dg.jpg" alt="" srcset="">
+            <p>SINCE 2017</p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-8">
+            <div id="mision">
+                <p style="padding-left:90px;padding-top:25px">Misión:<br>
+                El semillero DEVELOPERS & GEEKS tiene la finalidad de<br>
+                incorporar y desarrollar procesos de investigación aplicada<br>
+                en la generación de Software con altos estandares de calidad.<br>
+                </p>
+                <p style="padding-left:40px;padding-top:25px">Objetivos:<br>
+                Desarrollar procesos de investigación formativa, aplicada en la <br>
+                línea de tecnología de la formación y la comunicación - TIC, <br>
+                que permitan satisfacer las necesidades existentes del sector<br>
+                productivo del departamento del Huila.
+                </p>
+            </div>
+        </div>
+        <div class="col-md-4 mx-auto my-auto px-auto py-auto justify-content-center text-center">
+            <div class="text-center">
+                <button class="btn btn-lg text-center mx-auto mb-2" type="button" (click)="cambiar(1)">Colaboradores Aprendices</button><p></p>
+                <button class="btn btn-lg text-center mx-auto" type="button" (click)="cambiar(2)">Colaboradores Instructores</button>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-10">
+            <p>
+                CENTRO DE LA INDUSTRIA LA EMPRESA Y LOS SERVICIOS
+            </p>
+        </div>
+        <div class="col-2">
+            <p>
+                REGIONAL HUILA
+            </p>
+        </div>
+    </div>
+</div>
+<br><br><br><br><br>
+<div *ngIf="ver == 1">
+  <app-about-aprendiz></app-about-aprendiz>
+  <button class="btn btn-lg text-center mx-auto mb-2" type="button" (click)="cambiar(0)">Regresar</button><br><br><br><br>
+</div>
+<div *ngIf="ver == 2">
+  <app-about-instructor></app-about-instructor>
+  <button class="btn btn-lg text-center mx-auto mb-2" type="button"  (click)="cambiar(0)">Regresar</button><br><br><br><br>
+</div>
+
+

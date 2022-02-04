@@ -1,0 +1,26 @@
+.form-control{
+  width: 150px;
+}
+.form-select{
+  background-color: #f1eaea;
+  margin-left:650px;
+}
+
+.btn-b{
+  margin-left: -50px;
+  width: 50px;
+}
+
+h3{
+  margin-left: 650px;
+}
+
+.fecha{
+  margin-left: 840px;
+}
+
+.btn-fech{
+  margin-left: 840px;
+  background-color: #f1eaea;
+  border: #d8d8d8 solid;
+}

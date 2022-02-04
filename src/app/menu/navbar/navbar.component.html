@@ -1,0 +1,13 @@
+<header class="header row shadow" id="header">
+    <div class="col-md-2 text-start py-1">
+      <h3 class="text-white" (click)="showHideSideBar('header-toggle','nav-bar','body-pd','header','footer','version')">
+        <i class="bi fas fa-bars" id="header-toggle" style="cursor:pointer"></i>
+      </h3>
+    </div>
+    <div class="col-md-10 py-2 text-end" *ngIf="role()==true">
+      <app-navbar-administrador></app-navbar-administrador>
+    </div>
+      <div class="col-md-10" *ngIf="role()==false">
+        <app-navbar-aprendiz></app-navbar-aprendiz>
+      </div>
+  </header>

@@ -1,0 +1,93 @@
+.i-group{
+    width: 90%;
+    height: 50px;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .i-group input{
+    width: 80%;
+    height: 90%;
+    background: none;
+    color: black;
+    padding-top: 20px;
+    border: none;
+    outline: 0px;
+
+  }
+.tipo select{
+    border: 3px solid #FA4E0D;
+    border-radius: 5px;
+    background-color: #D8D8D8;
+    width: 200px;
+    height: 100%;
+    
+}
+.tipo{
+    float: right;
+}
+.btn:hover{
+    background-color: #FA4E0D;
+
+}
+
+.boton2{
+  border: 5px solid #FA4E0D;
+  margin-right: 5x;
+  margin: 5px;
+  border-radius: 10px;
+  color:#FA4E0D;
+  float: right;
+  background-color: white;
+}
+.boton1{
+  border: 5px solid #FA4E0D;
+  margin-right: 5px;
+  margin: 5px;
+  border-radius: 10px;
+  color:#FA4E0D;
+  float: right;
+  background-color: white;
+}
+.mg{
+  margin-bottom: 50px;
+}
+
+ .general{
+    border: 5px solid #FA4E0D;
+    border-radius: 10px;
+    padding-right: 20px;
+    padding-left: 50px;
+    width: 700px;
+    right: 800px;
+    left: 800px;
+ }
+
+ input{
+	display: block;
+}
+ .titulo{
+     margin:10px;
+ }
+ .margen{
+   
+    margin-left: 25px;
+    margin-top: 25px;
+  
+ }
+ 
+ 
+  .i-group .input-label{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 90%;
+    height: 90%;
+    pointer-events: none;
+    border-bottom: 1px solid gray;
+  }
+  
+  #boton{
+    background: #FA4E0D;
+    margin: 10px;
+  }

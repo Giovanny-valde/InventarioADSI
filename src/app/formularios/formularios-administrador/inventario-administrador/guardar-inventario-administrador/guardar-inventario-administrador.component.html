@@ -1,0 +1,52 @@
+<div class="container form-card">
+  <div class="row">
+    <div class="col-md-12 mx-auto">
+      <h3 class="text-center py-2">Crear o Modificar Inventario</h3>
+      <form [formGroup]="forminventarioadministrador">
+        <div class="my-2">
+          <label>Fecha: </label>
+          <input id="fecha" formControlName="fecha" type="datetime-local" class="form-control normal-input" placeholder="fecha">
+        </div>
+        <div class="my-2">
+          <label>Nombre Ambiente: </label>
+          <br><br>
+          <select class="form-select" formControlName="ambiente"  >
+            <option *ngFor="let item of listaAmbiente"  value="{{item.Id}}">{{item.Nombre}}</option>
+        </select>
+        </div>
+        <div class="my-2">
+          <label>Jornada: </label>
+          <br><br>
+          <select class="form-select" formControlName="jornada"  >
+            <option *ngFor="let item of listaJornada"  value="{{item.Id}}">{{item.Nombre}}</option>
+          </select>
+        </div>
+        <!-- <div class="my-2">
+          <label>Elemento: </label>
+          <br><br>
+          <select class="form-select" formControlName="elemento"  >
+            <option *ngFor="let item of listaElemento"  value="{{item.Id}}">{{item.Nombre}}</option>
+          </select>
+        </div> -->
+        <div class="my-3">
+          <div class="d-flex justify-content-between">
+            <div class="text-start">
+              <button class="btn btn-outline-secondary">Cancelar</button>
+            </div>
+            <div class="text-end">
+              <span *ngIf="data.id>0">
+                <button class="btn btn-normal-c"  (click)="guardar()">Modificar</button>
+              </span>
+              <span *ngIf="data.id==0">
+                <button class="btn btn-normal-c"  (click)="guardar()" [disabled]="forminventarioadministrador.invalid">Guardar</button>
+              </span>
+              <span class="mx-2">
+                <button class="btn btn-normal-c" (click)="modalInventarioDetalles()">Detalles</button>
+              </span>
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

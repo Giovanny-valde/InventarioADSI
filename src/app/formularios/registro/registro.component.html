@@ -1,0 +1,96 @@
+<div class="mt-5">
+    <div class="row m-0 p-0 d-flex justify-content-center">
+        <div class="col-6 d-flex justify-content-center">
+            <div class="w-auto container">
+                <div class="bg-ligh rounded shadow-lg">
+                    <div class="mx-auto"  style="background-color:#D8D8D8;" >
+                        <div class="row">
+                            <i class="fa fa-Twitter fa-4x text-center"><span class="fas fa-users"></span></i>
+                            <h2 class="text-center">REGISTRARSE</h2>
+                        </div>
+                        <div class="row mt-4">
+                            <div class="col-12 mx-auto px-4 " >
+                                <div class="row">
+                                    <div class="col-12">
+                                        <form [formGroup]="formregistro">
+                                            <div class="row">
+                                                <div class="col-6 my-2">
+                                                    <div class="i-group">
+                                                        <label class="input-label">Nombre:</label>
+                                                        <input id="nombre" formControlName="nombre" type="text" class="form-control normal-input">
+                                                    </div>
+                                                </div>
+                                                <div class="col-6 my-2">
+                                                  <div class="i-group">
+                                                      <label class="input-label">Apellido:</label>
+                                                      <input id="apellido" formControlName="apellido" type="text" class="form-control normal-input">
+                                                  </div>
+                                                </div>
+                                                <div class="col-6 my-2">
+                                                  <div class="i-group">
+                                                      <label >Tipo Documento:</label>
+                                                      <select class="form-select" style="height: 32px;" formControlName="tipodocumento"  >
+                                                        <option *ngFor="let item of listaTipoDocumento"  value="{{item.Id}}">{{item.Nombre}}</option>
+                                                      </select>
+                                                  </div>
+                                                </div>
+                                                <div class="col-6 my-2">
+                                                  <div class="i-group">
+                                                      <label class="input-label">N° Documento:</label>
+                                                      <input id="documento" formControlName="documento" type="text" class="form-control normal-input">
+                                                  </div>
+                                                </div>
+                                                <div class="col-6 my-2">
+                                                  <div class="i-group">
+                                                      <label class="input-label">Telefono:</label>
+                                                      <input id="telefono" formControlName="telefono" type="text" class="form-control normal-input">
+                                                  </div>
+                                                </div>
+                                                <div class="col-6 my-2">
+                                                  <div class="i-group">
+                                                      <label class="input-label">Dirección:</label>
+                                                      <input id="direccion" formControlName="direccion" type="text" class="form-control normal-input">
+                                                  </div>
+                                                </div>
+                                                <div class="col-6 my-2">
+                                                  <div class="i-group">
+                                                      <label class="input-label">E-mail:</label>
+                                                      <input id="email" formControlName="email" type="text" class="form-control normal-input">
+                                                  </div>
+                                                </div>
+                                                <div class="col-6 my-2">
+                                                  <div class="i-group">
+                                                      <label class="input-label">Password:</label>
+                                                      <input id="password" formControlName="password" type="password" class="form-control normal-input">
+                                                  </div>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="row mt-4">
+                            <div class="col-12 text-center">
+                                <button class="btn btn-warning px-2 mb-3  " id="boton" (click)="guardarPersona()">Crear Cuenta</button><br>
+                                <a routerLink="/" class="link">¿Ya tienes cuenta?</a><br>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-6 text-center">
+            <img src="../../../assets/img/logoprincipal.png" width="500px;" height="500px;">
+        </div>
+    </div>
+    <div class="row mt-0 align-items-center text-center">
+        <div class="col-md-6 my-5">
+            <img src="../../../assets/img/LogoSemillero.png" alt="">
+        </div>
+        <div class="col-md-6">
+            <img src="../../../assets/img/LogoST.png" alt="">
+        </div>
+    </div>
+</div>

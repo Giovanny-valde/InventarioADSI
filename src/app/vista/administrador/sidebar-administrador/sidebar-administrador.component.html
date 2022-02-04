@@ -1,0 +1,51 @@
+<a id="seguridad" class="rounded-pill nav__link mb-0 mt-0" href="#seguridadLinks" data-bs-toggle="collapse" style="cursor:pointer">
+    <i class="fas fa-shield-check nav__icon" style="margin-top: -17px;"></i>
+        <h4 class="nav__name ">Seguridad</h4>
+</a>
+<ul class="pt-0 mt-0 collapse" id="seguridadLinks">
+    <li style="list-style: none"><a class="as-link nav-link text-dark ps-5 py-0"  routerLink="administrador/seguridad/persona" routerLinkActive="fw-bold">Persona</a></li>
+    <li style="list-style: none"><a class="as-link nav-link text-dark ps-5 py-1" routerLink="administrador/seguridad/usuario" routerLinkActive="fw-bold" >Usuario</a></li>
+    <li style="list-style: none"><a class="as-link nav-link text-dark ps-5 py-1" routerLink="administrador/seguridad/uzuariorol" routerLinkActive="fw-bold" >Usuario Rol</a></li>
+    <li style="list-style: none"><a class="as-link nav-link text-dark ps-5 py-1" routerLink="administrador/seguridad/accion" routerLinkActive="fw-bold" >Acción</a></li>
+    <li style="list-style: none"><a class="as-link nav-link text-dark ps-5 py-0" routerLink="administrador/seguridad/rol" routerLinkActive="fw-bold" >Rol</a></li>
+</ul>
+<a  class="nav__link mb-0 mt-0" href="#parametrosLinks" data-bs-toggle="collapse" style="cursor:pointer">
+    <i class="fal fa-clinic-medical nav__icon" style="margin-top: -17px;"></i>
+    <h4 class="nav__name">Parámetros</h4>
+</a>
+<ul class="pt-0 mt-0 collapse" id="parametrosLinks">
+    <li style="list-style: none"><a class="as-link nav-link text-dark ps-5 py-0" routerLink="administrador/parametros/empresa" routerLinkActive="fw-bold">Empresa</a></li>
+    <li style="list-style: none"><a class="as-link nav-link text-dark ps-5 py-1" routerLink="administrador/parametros/sede" routerLinkActive="fw-bold">Sede</a></li>
+    <li style="list-style: none"><a class="as-link nav-link text-dark ps-5 py-0" routerLink="administrador/parametros/jornada" routerLinkActive="fw-bold">Jornada</a></li>
+</ul>
+<a  class="nav__link mb-0 mt-0" href="#inventarioLinks" data-bs-toggle="collapse" style="cursor:pointer">
+    <i class="fas fa-inventory nav__icon" style="margin-top: -17px;"></i>
+    <h4 class="nav__name">Inventario</h4>
+</a>
+<ul class="pt-0 mt-0 collapse" id="inventarioLinks">
+    <li style="list-style: none"><a class="as-link nav-link text-dark ps-5 py-1" routerLink="administrador/inventario/inventarioadministrador" routerLinkActive="fw-bold">Inventario</a></li>
+    <li style="list-style: none"><a class="as-link nav-link text-dark ps-5 py-0" routerLink="administrador/inventario/elemento" routerLinkActive="fw-bold">Elemento</a></li>
+    <li style="list-style: none"><a class="as-link nav-link text-dark ps-5 py-0" routerLink="administrador/inventario/zona" routerLinkActive="fw-bold">Zona</a></li>
+    <li style="list-style: none"><a class="as-link nav-link text-dark ps-5 py-0" routerLink="administrador/inventario/ambiente" routerLinkActive="fw-bold">Ambiente</a></li>
+    <li style="list-style: none"><a class="as-link nav-link text-dark ps-5 py-0" routerLink="administrador/inventario/estado" routerLinkActive="fw-bold">Estado</a></li>
+</ul>
+<a class="nav__link mb-0 mt-0" href="#inventarioaprendisLinks" data-bs-toggle="collapse" style="cursor:pointer">
+    <i class="fas fa-pallet" style="margin-top: -17px;"></i>
+        <h4 class="nav__name ">Inventario Aprendiz</h4>
+</a>
+<ul class="pt-0 mt-0 collapse" id="inventarioaprendisLinks">
+    <li style="list-style: none"><a class="as-link nav-link text-dark ps-5 py-0" routerLink="administrador/inventarioaprendis/historialadministrador" routerLinkActive="fw-bold">Historial</a></li>
+</ul>
+<div *ngIf="cantidadRole()==true">
+
+    <a  class="nav__link mb-0 mt-0" href="#cambiarRolLinks" data-bs-toggle="collapse" style="cursor:pointer">
+        <i class="fas fa-user-tag nav__icon" style="margin-top:-17px"></i>
+        <h4 class="nav__name">Cambiar Rol</h4>
+    </a>
+    <ul class="pt-0 mt-0 collapse" id="cambiarRolLinks">
+        <li *ngFor="let rol of roles">
+            <a class="as-link nav-link text-dark ps-5 py-0" routerLinkActive="fw-bold" [routerLink]="rol.toLowerCase()">{{rol.toLowerCase()}}</a>
+        </li>
+    </ul>
+
+</div>

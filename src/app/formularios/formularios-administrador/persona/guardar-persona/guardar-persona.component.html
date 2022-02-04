@@ -1,0 +1,64 @@
+<div class="container form-card">
+  <div class="row">
+    <div class="col-md-12 mx-auto">
+      <h3 class="text-center py-2">Crear o Modificar Persona</h3>
+      <form [formGroup]="formpersona">
+        <div class="my-2">
+          <label>Nombres: </label>
+          <input id="nombre" formControlName="nombre" type="text" class="form-control normal-input" placeholder="nombre">
+        </div>
+        <div class="my-2">
+          <label>Apellidos: </label>
+          <input id="apellido" formControlName="apellido" type="text" class="form-control normal-input" placeholder="apellido">
+        </div>
+        <div class="my-2">
+          <label>Documento: </label>
+          <input id="documento" formControlName="documento" type="text" class="form-control normal-input" placeholder="documento">
+        </div>
+        <div class="my-2">
+          <label>Tipo Documento: </label>
+          <br><br>
+          <select class="form-select" formControlName="tipodocumento"  >
+            <option *ngFor="let item of listaTipoDocumento"  value="{{item.Id}}">{{item.Nombre}}</option>
+          </select>
+        </div>
+        <div class="my-2">
+          <label>Telefono: </label>
+          <input id="telefono" formControlName="telefono" type="text" class="form-control normal-input" placeholder="telefono">
+        </div>
+        <div class="my-2">
+          <label>Email: </label>
+          <input id="email" formControlName="email" type="text" class="form-control normal-input" placeholder="email">
+        </div>
+        <div class="my-2">
+          <label>Direccion: </label>
+          <input id="direccion" formControlName="direccion" type="text" class="form-control normal-input" placeholder="direccion">
+        </div>
+        <div class="mt-4">
+          <label for="activo">Activo: </label>
+          <div class="input-group my-4">
+            <select name="" formControlName="activo" class="form-select">
+              <option value="true">Si</option>
+              <option value="false">No</option>
+            </select>
+          </div>
+        </div>
+        <div class="my-3">
+          <div class="d-flex justify-content-between">
+            <div class="text-start">
+              <button class="btn btn-outline-secondary"  mat-dialog-close>Cancelar</button>
+            </div>
+            <div class="text-end">
+              <span *ngIf="data.id>0">
+                <button class="btn btn-normal-c" (click)="guardar()">Modificar</button>
+              </span>
+              <span *ngIf="data.id==0">
+                <button class="btn btn-normal-c" (click)="guardar()" [disabled]="formpersona.invalid">Guardar</button>
+              </span>
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

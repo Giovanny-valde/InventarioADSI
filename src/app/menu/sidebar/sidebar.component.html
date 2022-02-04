@@ -1,0 +1,21 @@
+<div class="l-navbar shadow" id="nav-bar" style="background: white!important;" >
+    <nav class="nav"   >
+        <div class="ps-0 p-0" style="overflow-y:auto!important">
+            <a href="#" class="nav__logo text-decoration-none pt-0 pe-2" style="padding-left:20px" routerLink="/administrador">
+                <i class='icon-194740' style="font-size: 27px;color:var(--primary-color)"></i>
+                <h4 class="nav__logo-name" style="color:var(--primary-color); margin-top: 17px;">Inventario</h4>
+            </a>
+            <div class="mb-3 p-0" style="border-bottom:2px solid var(--primary-color) ;width:90%;margin:auto">
+            </div>
+            <div class="nav__list">
+                <div *ngIf="role()==true">
+                    <app-sidebar-administrador></app-sidebar-administrador>
+                </div>
+                <div *ngIf="role()==false">
+                    <app-sidebar-aprendiz></app-sidebar-aprendiz>
+                </div>
+
+            </div>
+        </div>
+    </nav>
+</div>

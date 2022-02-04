@@ -1,0 +1,48 @@
+<div class="container form-card">
+    <div class="row">
+      <div class="col-md-12 mx-auto">
+        <h3 class="text-center py-2">Crear o Modificar Zona</h3>
+        <form [formGroup]="formZona">
+          <div class="my-2">
+            <label>Codigo: </label>
+            <input id="codigo" formControlName="codigo" type="text" class="form-control normal-input" placeholder="codigo">
+          </div>
+          <div class="my-2">
+            <label>Nombre Ambiente: </label>
+            <br><br>
+            <select class="form-select" formControlName="ambiente"  >
+              <option *ngFor="let item of listaAmbiente"  value="{{item.Id}}">{{item.Nombre}}</option>
+          </select>
+          </div>
+          <div class="my-2">
+            <label>Nombre: </label>
+            <input id="nombre" formControlName="nombre" type="text" class="form-control normal-input" placeholder="nombre">
+          </div>
+          <div class="mt-4">
+            <label for="activo">Activo: </label>
+            <div class="input-group my-4">
+              <select name="" formControlName="activo" class="form-select">
+                <option value="true">Si</option>
+                <option value="false">No</option>
+              </select>
+            </div>
+          </div>
+          <div class="my-3">
+            <div class="d-flex justify-content-between">
+              <div class="text-start">
+                <button class="btn btn-outline-secondary">Cancelar</button>
+              </div>
+              <div class="text-end">
+                <span *ngIf="data.id>0">
+                  <button class="btn btn-normal-c" (click)="guardar()">Modificar</button>
+                </span>
+                <span *ngIf="data.id==0">
+                  <button class="btn btn-normal-c" (click)="guardar()" [disabled]="formZona.invalid">Guardar</button>
+                </span>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>

@@ -1,0 +1,28 @@
+<div class="row">
+    <div class="col">
+        <div class="text-center py-2">
+            <span class="text-white fw-bold">
+                <a routerLink="aprendiz/home" class="text-white text-decoration-none">
+                    <span routerLink="">Home</span>
+                </a>
+            </span>
+        </div>
+    </div>
+    <div class="col">
+        <div class="text-end py-2">
+            <span class="py-3 text-white me-5 fw-bold">
+                <a id="usuario" class="text-white text-decoration-none" routerLink="/aprendiz/usuarioapre">
+                    <div class="dropdown">
+                      <button class="btn py-0" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false" style="color: white;">
+                        <strong> Usuario</strong>
+                      </button>
+                      <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                          <li><a class="dropdown-item" href="#">Enviar Comentarios</a></li>
+                          <li><a class="dropdown-item" href="#"  (click)="cerrarSesion()" >Cerrar sesion</a></li>
+                      </ul>
+                    </div>
+                </a>
+            </span>
+        </div>
+    </div>
+  </div>

@@ -1,0 +1,62 @@
+<form [formGroup]="forminventarioaprendiz">
+  <div class="row align-items-center">
+    <div class="col-md-2">
+      <h2 class="principal">Registro de inventario</h2>
+    </div>
+    <div>
+      <h3 class="fecha">FECHA</h3>
+      <input class="btn btn-fech" type="datetime-local">
+    </div>
+    <div class="col-sm-2 text-end my-3">
+      <button class="btn btn-primary btn-normal" style="margin-left: 1040px;"><i class="fas fa-save"></i>Generar
+        Inventario</button>
+    </div>
+    <br><br>
+    <!-- <div *ngIf="esconder > 1"> -->
+      <div class="col-md-10 text-end" >
+        <div class="row align-items-center">
+          <div class="col-sm-4">
+            <h3>AMBIENTES</h3>
+            <select class="form-select my-2" formControlName="ambiente">
+              <option *ngFor="let item of listaAmbiente" value="{{item.Id}}">{{item.Nombre}}</option>
+            </select>
+            <input type="button" class="btn btn-normal" value="VER MIS ZONAS" (click)="listarZoans()">
+            <h3 class="my-2">ZONAS</h3>
+            <select class="form-select" formControlName="zona">
+              <option value="">--------</option>
+              <option *ngFor="let item of listaZona" value="{{item.Id}}" placeholder="Zona">{{item.Nombre}}</option>
+            </select>
+            <input type="button" class="btn btn-normal my-2" value="VER MIS ELEMENTOS" (click)="listarElementos()">
+          </div>
+        </div>
+      </div>
+    <div class="row mt-3">
+      <div class="col-md-12">
+        <span *ngIf="aparecer== 1">
+          <table class="table table-striped">
+            <thead>
+              <tr>
+                <th>Nombre</th>
+                <th>Cantidad</th>
+                <th>Observaciones</th>
+                <th></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let item of listaElemento.slice(inicio,fin)">
+                <td>{{item.Nombre}}</td>
+                <td> <input type="number" formControlName="cantidad" #asCantidad></td>
+                <td> <textarea name="" id="" cols="10" rows="10" formControlName="observacion"
+                    #asObservacion></textarea>
+                </td>
+                <td><input type="button" value="Guardar Elemento" (click)="guardar(item.Id)"
+                    [disabled]="forminventarioaprendiz.invalid"></td>
+              </tr>
+            </tbody>
+          </table>
+        </span>
+      </div>
+    </div>
+  </div>
+</form>
+<br><br><br>

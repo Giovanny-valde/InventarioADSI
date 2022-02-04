@@ -1,0 +1,286 @@
+@import '@angular/material/prebuilt-themes/indigo-pink.css';
+@import '~ngx-toastr/toastr';
+:root{
+    --header-height: 2.8rem;
+    --nav-width: 68px;
+    --z-fixed: 100;
+    --primary-color: #fa4e0d;
+    --secondary-color: #ffffff;
+    --primary-color-hover:#e04005;
+  }
+
+  body{
+    position: relative;
+    margin: var(--header-height) 0 0 0;
+    padding: 0 1rem;
+    transition: .5s;
+  }
+
+  a{
+    text-decoration: none;
+  }
+
+
+  /* _____________SIDEBAR COMPONENT START_____________ */
+
+
+  .l-navbar{
+    position: fixed;
+    top: 0;
+    left: -30%;
+    width: var(--nav-width);
+    height: 100vh;
+    transition: .5s;
+    z-index: var(--z-fixed);
+  }
+
+  .nav{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow: hidden;
+  }
+
+  .nav__logo, .nav__link{
+    display: grid;
+    grid-template-columns: max-content max-content;
+    align-items: center;
+    column-gap: 1rem;
+    padding: .5rem 0 .5rem 1.5rem;
+  }
+
+  .nav__logo{
+    margin-bottom: 2rem;
+  }
+
+
+  .nav__logo-name{
+    color: #000;
+    font-weight: 700;
+  }
+
+  .nav__link{
+    position: relative;
+    color: #000;
+    margin-bottom: 1.5rem;
+    transition: .3s;
+  }
+
+
+
+  .nav__icon{
+    font-size: 1.25rem;
+  }
+
+  a.as-link:hover{
+    border-bottom: 2px solid;
+    border-radius: 3px;
+    border-color:var(--primary-color);
+  }
+
+
+  /* _____________SIDEBAR COMPONENT END_____________ */
+
+
+
+  /*Add padding body movil*/
+  .body-pd{
+    padding-left: calc(var(--nav-width) + 1rem);
+  }
+
+
+  /* __________MEDIA QUERIES START__________*/
+  @media screen and (min-width: 768px){
+    body{
+      margin: calc(var(--navbar-height) + 1rem) 0 0 0;
+      padding-left: calc(var(--nav-width) + 2rem);
+    }
+
+    .header{
+      height: calc(var(--navbar-height) + 1rem);
+      padding: 0 2rem 0 calc(var(--nav-width) + 2rem);
+    }
+
+    .header__img{
+      width: 40px;
+      height: 40px;
+    }
+
+    .header__img img{
+      width: 45px;
+    }
+
+    .l-navbar{
+      left: 0;
+      padding: 1rem 1rem 0 0;
+    }
+
+    /*Show navbar desktop*/
+    .show{
+      width: calc(var(--nav-width) + 156px);
+    }
+
+    /*Add padding body desktop*/
+    .body-pd{
+      padding-left: calc(var(--nav-width) + 188px);
+    }
+  }
+  /* __________MEDIA QUERIES END_______________*/
+
+
+
+
+  /* SENA LOGO ICON START */
+
+  /* FONT GENERATOR FROM ICOMOON */
+  @font-face {
+    font-family: 'icomoon';
+    src:  url('assets/fonts/icomoon.eot?egqh4x');
+    src:  url('assets/fonts/icomoon.eot?egqh4x#iefix') format('embedded-opentype'),
+      url('assets/fonts/icomoon.ttf?egqh4x') format('truetype'),
+      url('assets/fonts/icomoon.woff?egqh4x') format('woff'),
+      url('assets/fonts/icomoon.svg?egqh4x#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
+  }
+
+  [class^="icon-"], [class*=" icon-"] {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'icomoon' !important;
+    speak: never;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  .icon-194740:before {
+    content: "\e900";
+
+  }
+
+  /* SENA LOGO ICON END */
+
+
+  input.search{
+    width: 200px;
+    padding-right: 50px;
+    border: 4px solid var(--primary-color)!important;
+    border-radius: 9px;
+  }
+  .bt{
+      margin-left: -50px;
+      width: 50px;
+  }
+  .btn-normal{
+      background-color: transparent;
+      border:2px solid var(--primary-color);
+      color: var(--primary-color);
+      margin-left: 650px;
+  }
+  .btn-normal:hover{
+      background-color: var(--primary-color);
+      border:2px solid var(--primary-color);
+      color: #fff;
+  }
+  .btn-normal-c{
+      background-color: var(--primary-color);
+      border:2px solid var(--primary-color);
+      color: #fff;
+  }
+  .btn-normal-c:hover{
+      background-color: var(--primary-color-hover);
+      border:2px solid var(--primary-color-hover);
+      color: #fff;
+  }
+
+  /*Formularios*/
+  .buscar{
+    width: 200px;
+    padding-right: 50px;
+    border: 4px solid var(--primary-color);
+    border-radius: 9px;
+    padding: 10px;
+}
+
+.btn-b{
+  margin-left: -50px;
+}
+.modal-backdrop {
+  background-color: rgba(0,0,0) !important;
+  width:100vw;
+}.form-card{
+  border:3px solid var(--primary-color);
+  border-radius:7px;
+  background-color: --secondary-color;
+}
+.normal-input{
+  border-bottom:3px solid #000;
+  border-top: 0px;
+  border-left: 0px;
+  border-right: 0px;
+  background-color: transparent!important;
+}
+.normal-input:focus{
+  border-bottom:3px solid var(--primary-color);
+  border-top: 0px;
+  border-left: 0px;
+  border-right: 0px;
+  background-color: transparent!important;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+  outline: 0 none;
+}
+
+.form-select{
+  background-color: #f1eaea;
+}
+
+/*Inicio sesion*/
+.i-group{
+  width: 100%;
+  height: 50px;
+  position: relative;
+  overflow: hidden;
+}
+
+.i-group input{
+  width: 100%;
+  height: 100%;
+  background: none;
+  color: black;
+  padding-top: 20px;
+  border: none;
+  outline: 0px;
+}
+
+.i-group .input-label{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  border-bottom: 1px solid gray;
+}
+
+#boton{
+  background: #FA4E0D
+  ;
+}
+
+.link{
+  color:black;
+  text-decoration: underline;
+  text-decoration: none;
+  }
+
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

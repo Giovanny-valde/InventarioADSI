@@ -1,0 +1,25 @@
+<a  class=" nav__link mb-0 mt-0 rounded-pill" id="inicio" routerLink="aprendiz/inicio" data-bs-toggle="collapse" style="cursor:pointer">
+    <i class="fas fa-home nav__icon" style="margin-top: -17px;"></i>
+    <h4 class="nav__name" routerLink="aprendiz/home">Inicio</h4>
+</a>
+<a id="seguridad" class="rounded-pill nav__link mb-0 mt-0" href="#AinventarioLinks" data-bs-toggle="collapse" style="cursor:pointer">
+    <i class="fas fa-inventory nav__icon"></i>
+        <h4 class="nav__name " style="margin-top: 10px;">Inventario</h4>
+</a>
+<ul class="pt-0 mt-0 collapse" id="AinventarioLinks">
+    <li style="list-style: none"><a class="as-link nav-link text-dark ps-5 py-0" routerLink="aprendiz/inventarioAprendiz" routerLinkActive="fw-bold">Inventario</a></li>
+    <li style="list-style: none"><a class="as-link nav-link text-dark ps-5 py-1" routerLink="aprendiz/historialAprendiz" routerLinkActive="fw-bold" >Historial</a></li>
+</ul>
+<div *ngIf="cantidadRole()==true">
+
+    <a  class="nav__link mb-0 mt-0" href="#cambiarRolsLinks" data-bs-toggle="collapse" style="cursor:pointer">
+        <i class="fas fa-user-tag nav__icon" style="margin-top:-17px"></i>
+        <h4 class="nav__name" style="margin-top: -17px;">Cambiar Rol</h4>
+    </a>
+    <ul class="pt-0 mt-0 collapse" id="cambiarRolsLinks">
+        <li *ngFor="let rol of roles">
+            <a class="as-link nav-link text-dark ps-5 py-0" routerLinkActive="fw-bold" [routerLink]="rol.toLowerCase()">{{rol.toLowerCase()}}</a>
+        </li>
+    </ul>
+
+</div>
